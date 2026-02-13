@@ -88,8 +88,8 @@ Evaluation was performed through controlled user testing and performance trackin
 ## Technology Stack
 
 - React.js
-- Node.js
-- Express.js
+- python
+- vue.js
 - MongoDB
 - REST APIs
 - Google Gemini API
