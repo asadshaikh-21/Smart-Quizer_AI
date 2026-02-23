@@ -1,0 +1,28 @@
+/* --- GLOBAL STYLE OVERRIDE FOR FUTURISTIC LOOK --- */
+
+/* Basic reset and dark background for the entire viewport */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #1a1a2e; /* Deep purple/blue background */
+    background-image: radial-gradient(circle, #331f47, #1a1a2e); /* Subtle gradient */
+    color: #f0f0f0; /* Light text color for contrast */
+}
+
+/* Force the main #app container to span the full width */
+#app {
+    display: block; 
+    max-width: none; 
+    text-align: center; /* Center the entire app content */
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ensure headings and links inside the app are vibrant */
+h1, h2, a {
+    color: #c990ff; /* Light purple/blue for titles */
+}
+
+/* Standard paragraph text should be visible */
+p {
+    color: #e0e0e0;
+}

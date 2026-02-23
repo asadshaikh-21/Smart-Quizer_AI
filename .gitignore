@@ -1,0 +1,17 @@
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Node modules
+node_modules/
+backend/node_modules/
+frontend/vue-project/node_modules/
+
+# Python virtual environment
+venv/
+backend/venv/
+
+# OS files
+.DS_Store
+Thumbs.db
