@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "mern-backend",
   "version": "1.0.0",
   "type": "module",
@@ -26,9 +25,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
-=======
-  "dependencies": {
-    "mongodb": "^6.20.0"
->>>>>>> df11bf3a350ce244a541a090d11365dfe317b6b9
   }
 }
