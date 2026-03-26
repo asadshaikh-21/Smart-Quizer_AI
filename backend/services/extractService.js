@@ -8,7 +8,7 @@ export async function extractFromUrl(url) {
     throw new Error("Invalid URL. Must start with http:// or https://");
   }
 
-  // ✅ Wikipedia shortcut (avoids 403 from scraping HTML)
+  // Wikipedia shortcut
   if (url.includes("wikipedia.org/wiki/")) {
     const title = decodeURIComponent(url.split("/wiki/")[1] || "").split("#")[0];
     const apiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(
@@ -31,7 +31,7 @@ export async function extractFromUrl(url) {
     }
   }
 
-  // ✅ Generic HTML fetch with browser-like headers
+  // Generic HTML fetch
   const { data: html } = await axios.get(url, {
     timeout: 20000,
     maxRedirects: 5,
@@ -55,9 +55,8 @@ export async function extractFromUrl(url) {
 export async function extractFromPdf(buffer) {
   if (!buffer) throw new Error("No PDF buffer provided");
 
-  // ✅ ESM-safe pdf-parse call for Node v22
-  const data = await pdfParse.default(buffer);
-
+  const data = await pdf(buffer);
   const text = (data?.text || "").replace(/\s+/g, " ").trim();
+
   return text;
 }
