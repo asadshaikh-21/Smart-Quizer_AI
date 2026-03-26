@@ -9,8 +9,8 @@ import Analytics from "./pages/Analytics";
 import AiHelper from "./pages/AiHelper";
 import GenerateQuestions from "./pages/GenerateQuestions";
 import PreviewQuestions from "./pages/PreviewQuestions";
-import Welcome from "./pages/Welcome"; // ✅ ADD THIS
-
+import Welcome from "./pages/Welcome";
+import About from "../pages/About";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
@@ -19,22 +19,20 @@ export default function App() {
       <Navbar />
 
       <Routes>
-        {/* ✅ Landing page */}
         <Route path="/" element={<Welcome />} />
-
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/preview/:batchId" element={<PreviewQuestions />} />
         <Route path="/ai/explain" element={<ExplainPage />} />
 
         <Route
-  path="/about"
-  element={
-    <ProtectedRoute>
-      <About />
-    </ProtectedRoute>
-  }
-/>
+          path="/about"
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
+          }
+        />
 
         <Route
           path="/dashboard"
@@ -81,7 +79,6 @@ export default function App() {
           }
         />
 
-        {/* default */}
         <Route path="*" element={<Login />} />
       </Routes>
     </div>

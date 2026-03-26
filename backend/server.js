@@ -11,6 +11,7 @@ import quizRoutes from "./routes/quizRoutes.js";
 import adaptiveRoutes from "./routes/adaptiveRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
 import aiRoutes from "./routes/ai.js";
+<Route path="/about" element={<About />} />
 
 const app = express();
 
