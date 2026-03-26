@@ -1,6 +1,6 @@
 import axios from "axios";
 import { load } from "cheerio";
-import * as pdfParse from "pdf-parse";
+import pdf from "pdf-parse-debugging-disabled";
 
 // -------------------- URL extraction --------------------
 export async function extractFromUrl(url) {
