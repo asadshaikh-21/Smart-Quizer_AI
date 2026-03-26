@@ -58,6 +58,9 @@ export default function Navbar() {
               <NavLink to="/generate" className={navLinkClass}>
                 Generate
               </NavLink>
+              <NavLink to="/about" className={navLinkClass}>
+                About Me!
+              </NavLink>
             </div>
           ) : (
             <div />
