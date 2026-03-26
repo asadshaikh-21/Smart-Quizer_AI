@@ -28,6 +28,15 @@ export default function App() {
         <Route path="/ai/explain" element={<ExplainPage />} />
 
         <Route
+  path="/about"
+  element={
+    <ProtectedRoute>
+      <About />
+    </ProtectedRoute>
+  }
+/>
+
+        <Route
           path="/dashboard"
           element={
             <ProtectedRoute>
