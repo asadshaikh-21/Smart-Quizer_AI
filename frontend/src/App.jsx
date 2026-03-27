@@ -10,7 +10,7 @@ import AiHelper from "./pages/AiHelper";
 import GenerateQuestions from "./pages/GenerateQuestions";
 import PreviewQuestions from "./pages/PreviewQuestions";
 import Welcome from "./pages/Welcome";
-import About from "../pages/About";
+import About from "./pages/About";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
