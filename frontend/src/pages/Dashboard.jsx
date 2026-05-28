@@ -139,7 +139,7 @@ export default function Dashboard() {
             </div>
 
             <div className="border-t border-white/10 px-6 py-4 text-xs text-white/55">
-              You’re building a portfolio-grade project — keep iterating.
+              This project is continuously evolving with new adaptive learning features, AI-powered enhancements, and performance analytics to create a smarter and more personalized quiz experience..
             </div>
           </div>
         </div>

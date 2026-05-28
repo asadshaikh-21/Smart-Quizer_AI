@@ -1,17 +1,17 @@
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-
+import { useAuth } from "../auth/AuthProvider";
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const token = localStorage.getItem("sq_token");
+  const { token, logout } = useAuth();
 
   const isAuthPage =
     location.pathname === "/login" || location.pathname === "/register";
 
-  function logout() {
-    localStorage.removeItem("sq_token");
-    navigate("/login");
-  }
+ function handleLogout() {
+  logout();
+  navigate("/login");
+}
 
   const navLinkClass = ({ isActive }) =>
     `rounded-xl px-3 py-2 text-sm font-medium transition ${
@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-slate-950/80 backdrop-blur-xl border-b border-white/10">
-        <nav nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
           {/* Brand */}
           <Link to={token ? "/dashboard" : "/login"} className="flex items-center gap-2">
@@ -86,7 +86,7 @@ export default function Navbar() {
               </>
             ) : (
               <button
-                onClick={logout}
+                onClick={handleLogout}
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white/10 ring-1 ring-white/15 text-white hover:bg-white/15 transition"
               >
                 Logout
