@@ -146,6 +146,7 @@ export default function Dashboard() {
 
         <p className="mt-10 text-center text-xs text-white/45">
           © {new Date().getFullYear()} SmartQuizzer • Built with MERN + Gemini
+          {new Date().getFullYear()} Build by Asad Shaikh ❤️
         </p>
       </main>
     </div>
