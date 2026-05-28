@@ -34,7 +34,7 @@
 #     def __init__(self):
 #         # Initializes the GenerativeModel object directly. 
 #         # The key is automatically read from the GEMINI_API_KEY environment variable.
-#         self.model = genai.GenerativeModel('gemini-1.5-flash-latest') 
+#         self.model = genai.GenerativeModel('gemini-2.0-flash') 
 
 #     # --- MODULE 2: CONTENT INGESTION & PARSING (Retained) ---
     
@@ -211,7 +211,7 @@ class AIService:
     
     def __init__(self):
         # Initializes the GenerativeModel object directly. 
-        self.model = genai.GenerativeModel('gemini-1.5-flash-latest') 
+        self.model = genai.GenerativeModel('gemini-2.0-flash') 
 
     # --- MODULE 2: CONTENT INGESTION & PARSING (Retained) ---
     
