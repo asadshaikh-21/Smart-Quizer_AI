@@ -13,8 +13,8 @@ function getModels() {
 
   const genAI = new GoogleGenerativeAI(apiKey);
 
-  const MODEL_FAST = process.env.GEMINI_MODEL_FAST || "gemini-2.0-flash";
-  const MODEL_PRO = process.env.GEMINI_MODEL_PRO || "gemini-2.0-flash";
+  const MODEL_FAST = process.env.GEMINI_MODEL_FAST || "gemini-1.5-flash";
+  const MODEL_PRO = process.env.GEMINI_MODEL_PRO || "gemini-1.5-flash";
 
   fastModel = genAI.getGenerativeModel({ model: MODEL_FAST });
   proModel = genAI.getGenerativeModel({ model: MODEL_PRO });
